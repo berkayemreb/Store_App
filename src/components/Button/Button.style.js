@@ -4,16 +4,16 @@ export default StyleSheet.create({
     container: {
         borderWidth: 1,
         borderRadius: 50,
-        borderColor:'#a0a0a0',
+        borderColor:'#0093c4',
         marginVertical: 5,
         marginHorizontal: 10,
         padding: 7,
         alignItems: 'center',
-        backgroundColor: '#f0f0f0'
+        backgroundColor: '#0093c4'
     },
     text: {
         fontSize: 18,
         fontWeight: '800',
-        color: '#4fc3f7',
+        color: '#f0f0f0',
     }
 })
