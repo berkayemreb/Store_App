@@ -11,9 +11,10 @@ const Input = ({ placeholder, onChangeText, value, isSecure, iconName }) => {
                 placeholder={placeholder}
                 onChangeText={onChangeText}
                 value={value}
-                secureTextEntry={isSecure}
+                secureTextEntry={isSecure} // sifreyi gizledik.
+                autoCapitalize='none' // Otomatikmen büyük harfle baslamasını engellemiş olduk.
             />
-            <MaterialCommunityIcons name={iconName} size={24} color='#494949'/>
+            <MaterialCommunityIcons name={iconName} size={24} color='#494949' />
 
         </SafeAreaView>
     )
