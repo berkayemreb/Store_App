@@ -9,6 +9,10 @@ export default StyleSheet.create({
         marginVertical: 5,
         paddingHorizontal: 5,
         paddingVertical: 4,
-        backgroundColor: "#f0f0f0"
+        backgroundColor: "#f0f0f0",
+        flexDirection: 'row',
+    },
+    input: {
+        flex: 1
     }
 })
