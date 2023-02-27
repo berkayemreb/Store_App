@@ -2,14 +2,14 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import styles from './Detail.style';
 import useFetch from '../../hooks/useFetch';
-import { URL_API } from '@env';
+import { URL_PRODUCT_API } from '@env';
 import LoadingAnimation from '../../components/LoadingAnimation';
 import ErrorAnimation from '../../components/ErrorAnimation';
 
 const Detail = ({ route }) => {
 
     const { productId } = route.params;
-    const { data, loading, error } = useFetch(`${URL_API}/${productId}`);
+    const { data, loading, error } = useFetch(`${URL_PRODUCT_API}/${productId}`);
 
     if (loading) {
         return <LoadingAnimation />
