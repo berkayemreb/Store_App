@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import { URL_PRODUCT_API } from '@env';
 import ProductCard from '../../components/ProductCard';
 import useFetch from '../../hooks/useFetch';
@@ -27,13 +27,7 @@ const Product = ({ navigation }) => {
         return <ErrorAnimation />
     }
 
-    return (
-        <View>
-            <Button title="LogOut!" onPress={() => dispatch({ type: 'SET_USER', payload: { user: null } })
-            } />
-            <FlatList data={data} renderItem={renderProduct} />
-        </View>
-    )
+    return (<FlatList data={data} renderItem={renderProduct} />)
 }
 
 export default Product;

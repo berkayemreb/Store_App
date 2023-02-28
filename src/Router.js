@@ -6,8 +6,10 @@ import Product from './pages/Product';
 import Detail from './pages/Detail';
 import Login from './pages/Login';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import LoadingAnimation from './components/LoadingAnimation';
+
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +17,8 @@ const Router = () => {
 
   const userSession = useSelector(s => s.user);
   const isAuthLoading = useSelector(s => s.isAuthLoading);
+
+  const dispatch = useDispatch();
 
   return (
     <NavigationContainer>
@@ -38,7 +42,13 @@ const Router = () => {
                 title: 'Shop',
                 headerTitleStyle: { color: '#fff', fontSize: 24 },
                 headerTitleAlign: 'center',
-                headerStyle: { backgroundColor: '#4fc3f7' }
+                headerStyle: { backgroundColor: '#4fc3f7' },
+                headerRight: () => (
+                  <MaterialCommunityIcons
+                    name='logout'
+                    size={24}
+                    color='white'
+                    onPress={() => dispatch({ type: 'REMOVE_USER' })} />)
               }} />
             <Stack.Screen
               name='DetailScreen'

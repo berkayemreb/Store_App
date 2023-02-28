@@ -12,7 +12,7 @@ import { URL_AUTH_API } from '@env';
 
 import { useDispatch } from 'react-redux';
 
-const Login = ({ navigation }) => {
+const Login = () => {
 
     const { data, loading, error, setError, post } = usePost();
     const dispatch = useDispatch();
@@ -68,26 +68,7 @@ const Login = ({ navigation }) => {
 export default Login;
 
 const user = {
-    "address": {
-        "geolocation": {
-            "lat": "-37.3159",
-            "long": "81.1496"
-        },
-        "city": "kilcoole",
-        "street": "new road",
-        "number": 7682,
-        "zipcode": "12926-3874"
-    },
-    "id": 1,
-    "email": "john@gmail.com",
-    "username": "johnd",
-    "password": "m38rmF$",
-    "name": {
-        "firstname": "john",
-        "lastname": "doe"
-    },
-    "phone": "1-570-236-7033",
-    "__v": 0
+    /*  ...  */ // apiden gelen user nesnesinin bilgileri gibi düşünebilirsin.
 }
 
 // GENEL NOT: formik kullanmak yerine stateler ile de bu işlemi yapabilirdik ama her harf degişikliginde tüm component render edileceği için verimli olmazdı. Bu yuzden form yapılarında formik kullanmak daha kullanışlıdır.
